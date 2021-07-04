@@ -17,7 +17,7 @@ var Simple_Math = (45 + 55) * 10 / 2 - 13;
 document.getElementById("All").innerHTML = "45 + 55 multiplied by 10 divided by 2 minus 13 = " + Simple_Math;
 //remainder//
 var simple_Math = 25 % 6;
-document.getElementById("Remainder").innerHTML = "When you divided 25 by 6 you have a remainder of 6" + simple_Math;
+document.getElementById("Remainder").innerHTML = "When you divided 25 by 6 you have a remainder of " + simple_Math;
 // opposite//
 var x = 10;
 document.getElementById("Math").innerHTML = -x;
