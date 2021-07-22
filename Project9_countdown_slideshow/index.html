@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/CSS/main.css">
+</head>
+
+<body>
+    <h2>Automatic Seasons Sildeshow</h2>
+    <p>The image will change every 5 seconds:</p>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1/4</div>
+            <img src="/pictures/kiwihug-ZB3OBIkNh6E-unsplash.jpg" style="width:100%">
+            <div class="text">Spring</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2/4</div>
+            <img src="/pictures/natasha-miller-3YSUv74LL80-unsplash.jpg" style="width:100%">
+            <div class="text">Summer</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3/4</div>
+            <img src="/pictures/timothy-eberly-yuiJO6bvHi4-unsplash.jpg" style="width:100%">
+            <div class="text">Autumn</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4/4</div>
+            <img src="/pictures/ian-schneider-gwF2mDy5lFQ-unsplash.jpg" style="width:100%">
+            <div class="text">Winter</div>
+        </div>
+    </div>
+    <br>
+
+    <div style="text-align: center;">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <div class="count-timer">
+        <p>How many seconds would you like to set the alarm for?</p>
+        <input id="seconds" value="" />
+        <button onclick="countdown()">Click here</button>
+        <p id="timer"></p>
+    </div>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
