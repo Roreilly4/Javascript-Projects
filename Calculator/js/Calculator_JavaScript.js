@@ -1,7 +1,7 @@
 // creates an object to keep track of values
 const Calculator = {
     // this displays 0 on the screen
-    Dispaly_Value: '0',
+    Display_Value: '0',
     //This will hold the first operand for any expressions, we set it to null for now 
     First_Operand: null,
     //this checks whether or not the second operand has been input 
@@ -12,16 +12,16 @@ const Calculator = {
 
 // this modifies values each time a button is clicked 
 function Input_Digit(digit) {
-    const { Dispaly_Value, Wait_Second_Operand } = Calculator;
+    const { Display_Value, Wait_Second_Operand } = Calculator;
     //we are checking to see if Wait_Second_Operand is true and set
     //Display_Value to the key that was clicked.
     if (Wait_Second_Operand === true) {
-        Calculator.Dispaly_Value = digit;
+        Calculator.Display_Value = digit;
         Calculator.Wait_Second_Operand = false;
     } else {
         //this overwrites Display_Value if the current value is 0
         // otherwise it adds onto it.
-        Calculator.Dispaly_Value = Dispaly_Value === '0' ? digit : Dispaly_Value + digit;
+        Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
     }
 }
 // This section handles decimal points 
@@ -29,20 +29,20 @@ function Input_Decimal(dot) {
     // this ensures that accidental clicking of the decimal point
     // dosen't cause bugs in your operation 
     if (Calculator.Wait_Second_Operand === true) return;
-    if (!Calculator.Dispaly_Value.includes(dot)) {
+    if (!Calculator.Display_Value.includes(dot)) {
         //we are saying that if the Display_Value does not contain a decimal point//
         // we want to add a decimal point 
-        Calculator.Dispaly_Value += dot;
+        Calculator.Display_Value += dot;
     }
 }
 
 //this section handles operators
 function Handle_Operator(Next_Operator) {
-    const { First_Operand, Dispaly_Value, operator } = Calculator
+    const { First_Operand, Display_Value, operator } = Calculator
     //When an operator key is pressed, we convert the current number
     //diplayed on the screen to a number anf then store the result in
     //Calculator.Frist_Operand if it dosen't already exist
-    const Value_of_Input = parseFloat(Dispaly_Value);
+    const Value_of_Input = parseFloat(Display_Value);
     //checks if an operator already exists and if Wait_Second_Operand is true,
     // then updates the operator and exists from function
     if (operator && Calculator.Wait_Second_Operand) {
